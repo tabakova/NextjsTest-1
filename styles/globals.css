@@ -6,6 +6,10 @@ body {
     Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body {
+  background: url("../public/img/background.png") no-repeat fixed center;
+}
+
 a {
   color: inherit;
   text-decoration: none;

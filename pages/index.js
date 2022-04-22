@@ -1,13 +1,21 @@
-import { Hero } from "../sections";
+import { Main } from "../sections";
 
-const heroProps = {
-  image: { src: "/img/heroimg.png", alt: "", width: 1000, height: 1680 },
-  title: "Agency procurement, outsourced.",
-  description: "Start the process here",
-  ctaText: "Start",
+const mainProps = {
+  title: "Managed agency selection",
+  description: "Strengthen your onboarding process",
+  image: { src: "/img/video.png", alt: "Video Image", width: 320, height: 500 },
+  cardtopimage: { src: "/img/topcardicon.png", alt: "Top card image", width: 83, height: 69},
+  cardtitletop: "Brief",
+  carddescriptiontop: "Complete brief writing or simple guidance on what to include, we've got you covered.",
+  cardmidimage: { src: "/img/midcardicon.png", alt: "Mid card image", width: 83, height: 73 },
+  cardtitlemid: "Search",
+  carddescriptionmid: "In-depth agency search covering; criteria matching, door knocking and due-dilligence vetting.",
+  cardbottomimage: { src: "/img/bottomcardicon.png", alt: "Bottom card image", width: 83, height: 76 },
+  cardtitlebottom: "Pitch",
+  carddescriptionbottom: "Comprehensive pitch management, including comms, diary management and pitch hosting.",
 };
 
-export default function Home() {
+export function Home() {
   return (
     <>
       <head>
@@ -19,7 +27,7 @@ export default function Home() {
         />
       </head>
       <div>
-        <Hero {...heroProps} />
+        <Main {...mainProps} />
         {/** Other sections */}
       </div>
     </>

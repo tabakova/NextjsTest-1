@@ -1,14 +1,23 @@
-// The Card to be exported goes here
-import Image from "next/image.js";
+import Image from "next/image";
+import {
+  StyledTextContainer,
+  StyledContainer,
+  StyledTitle,
+  StyledDescription,
+} from "./elements";
 import { CardContainer } from "../../components/Containers/CardContainer/CardContainer";
 import { CardItem } from "../../components/CardItem";
 import { StyledImageContainer, StyledCardInnerHeading, StyledCardParagraph  } from "../../sections/Main/elements";
 
-export const Card = ({ image, cardtopimage, cardmidimage, cardbottomimage,  cardtitletop, carddescriptiontop, 
-  cardtitlemid, carddescriptionmid, cardtitlebottom, carddescriptionbottom, ...props}) => {
+export const Main = ({ title, description, image, cardtopimage, cardmidimage, cardbottomimage,  cardtitletop, carddescriptiontop, 
+  cardtitlemid, carddescriptionmid, cardtitlebottom, carddescriptionbottom, ...props }) => {
   return (
-    <Card {...props}>
-      <CardContainer>
+      <StyledContainer {...props}>
+        <StyledTextContainer>
+          <StyledTitle>{title}</StyledTitle>
+          <StyledDescription>{description}</StyledDescription>
+        </StyledTextContainer>
+        <CardContainer {...props}>
         <StyledImageContainer>
           <Image layout="responsive" src={image?.src} alt={image?.alt} width={image?.width} height={image?.height}/>
         </StyledImageContainer>
@@ -28,6 +37,6 @@ export const Card = ({ image, cardtopimage, cardmidimage, cardbottomimage,  card
           <StyledCardParagraph>{carddescriptionbottom}</StyledCardParagraph>
         </CardItem>
       </CardContainer>
-    </Card>
+      </StyledContainer> 
   );
 };
