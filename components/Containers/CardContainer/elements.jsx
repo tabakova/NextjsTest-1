@@ -21,8 +21,8 @@ import styled from "styled-components";
 // `;
 
 export const StyledCardContainer = styled(({ topMargin = 0, bottomMargin = 0, ...props }) => <div {...props} />)`
-  display:grid;
-  grid-template-columns:repeat(11, 2fr);
-  row-gap:11px;
-  width:100%;
+  display: grid;
+  grid-template-columns: repeat(11, 2fr);
+  row-gap: 11px;
+  width: 100%;
 `;

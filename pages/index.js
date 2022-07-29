@@ -15,7 +15,7 @@ const mainProps = {
   carddescriptionbottom: "Comprehensive pitch management, including comms, diary management and pitch hosting.",
 };
 
-export function Home() {
+export default function Home() {
   return (
     <>
       <head>

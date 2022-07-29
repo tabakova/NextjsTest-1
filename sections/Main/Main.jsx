@@ -5,11 +5,9 @@ import {
   StyledTitle,
   StyledDescription,
 } from "./elements";
-import { CardContainer } from "../../components/Containers/CardContainer/CardContainer";
-import { CardItem } from "../../components/CardItem";
-import { StyledImageContainer, StyledCardInnerHeading, StyledCardParagraph  } from "../../sections/Main/elements";
+import { Card } from "../../collections";
 
-export const Main = ({ title, description, image, cardtopimage, cardmidimage, cardbottomimage,  cardtitletop, carddescriptiontop, 
+export const Main = ({ title, description, image, cardTopImage, cardMidImage, cardBottomImage,  cardTitleTop, cardDescriptionTop, 
   cardtitlemid, carddescriptionmid, cardtitlebottom, carddescriptionbottom, ...props }) => {
   return (
       <StyledContainer {...props}>
@@ -17,26 +15,7 @@ export const Main = ({ title, description, image, cardtopimage, cardmidimage, ca
           <StyledTitle>{title}</StyledTitle>
           <StyledDescription>{description}</StyledDescription>
         </StyledTextContainer>
-        <CardContainer {...props}>
-        <StyledImageContainer>
-          <Image layout="responsive" src={image?.src} alt={image?.alt} width={image?.width} height={image?.height}/>
-        </StyledImageContainer>
-        <CardItem> 
-          <Image layout="fixed" src={cardtopimage?.src} alt={cardtopimage?.alt} width={cardtopimage?.width} height={cardtopimage?.height}/>
-          <StyledCardInnerHeading>{cardtitletop}</StyledCardInnerHeading>
-          <StyledCardParagraph>{carddescriptiontop}</StyledCardParagraph>
-        </CardItem>
-        <CardItem> 
-          <Image layout="fixed" src={cardmidimage?.src} alt={cardmidimage?.alt} width={cardmidimage?.width} height={cardmidimage?.height}/>
-          <StyledCardInnerHeading>{cardtitlemid}</StyledCardInnerHeading>
-          <StyledCardParagraph>{carddescriptionmid}</StyledCardParagraph>
-        </CardItem>
-        <CardItem> 
-        <Image layout="fixed" src={cardbottomimage?.src} alt={cardbottomimage?.alt} width={cardbottomimage?.width} height={cardbottomimage?.height}/>
-          <StyledCardInnerHeading>{cardtitlebottom}</StyledCardInnerHeading>
-          <StyledCardParagraph>{carddescriptionbottom}</StyledCardParagraph>
-        </CardItem>
-      </CardContainer>
+        <Card {...props} />
       </StyledContainer> 
   );
 };
