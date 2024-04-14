@@ -1,18 +1,10 @@
-import { Main } from "../sections";
+import { Hero } from "../sections";
 
-const mainProps = {
+const heroProps = {
+  image: { src: "/img/video.png", alt: "", width: 658, height: 1050 },
   title: "Managed agency selection",
   description: "Strengthen your onboarding process",
-  image: { src: "/img/video.png", alt: "Video Image", width: 320, height: 500 },
-  cardtopimage: { src: "/img/topcardicon.png", alt: "Top card image", width: 83, height: 69},
-  cardtitletop: "Brief",
-  carddescriptiontop: "Complete brief writing or simple guidance on what to include, we've got you covered.",
-  cardmidimage: { src: "/img/midcardicon.png", alt: "Mid card image", width: 83, height: 73 },
-  cardtitlemid: "Search",
-  carddescriptionmid: "In-depth agency search covering; criteria matching, door knocking and due-dilligence vetting.",
-  cardbottomimage: { src: "/img/bottomcardicon.png", alt: "Bottom card image", width: 83, height: 76 },
-  cardtitlebottom: "Pitch",
-  carddescriptionbottom: "Comprehensive pitch management, including comms, diary management and pitch hosting.",
+  textBox: { top: "Brief", middle: "Search", bottom: "Pitch" },
 };
 
 export default function Home() {
@@ -27,7 +19,7 @@ export default function Home() {
         />
       </head>
       <div>
-        <Main {...mainProps} />
+        <Hero {...heroProps} />
         {/** Other sections */}
       </div>
     </>
